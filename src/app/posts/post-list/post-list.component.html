@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <br>
+      <div *ngIf="receivePost.length > 0">
+        <div class="card-body shadow-sm bg-white mb-2 pt-2 px-4 pb-0" *ngFor="let post of receivePost">
+          <p class="m-0">
+            {{post.title}}
+          </p>
+          <p class="m-0">
+            <small class="post-title">
+              {{post.content}}
+            </small>
+          </p>
+          <div class="text-right pb-2">
+            <span class="badge badge-pill shadow px-2 py-1 mr-2" [routerLink]="['/edit', post.id]" routerLinkActive="router-link-active" >
+              Edit
+            </span>
+            <span class="badge badge-pill shadow px-2 py-1" (click)="deletePost(post.id)">
+              Delete
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body shadow-sm bg-white" *ngIf="receivePost.length <= 0">
+        <p class="m-0 text-center">
+          <span class="post-title">
+            No posts added
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

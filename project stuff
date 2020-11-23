@@ -1,0 +1,44 @@
+api key : IBBCAAPF
+private key:
+de63e5fc-4992-421e-8dab-ae3d96ab6f1a
+my current ip
+103.57.82.73
+
+db user
+sujay
+hello@123
+mongodb+srv://sujay:<password>@cluster0.wys5n.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
+Angular route and node route should not be the same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+full driver
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://sujay:<password>@cluster0.wys5n.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+create a db
+use dbname
+
+check current db
+db
+
+documents are stored in collections, the name of the collection will be the prural of model name

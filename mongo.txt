@@ -1,0 +1,37 @@
+to enter into mongo shell
+-------------------------
+mongo
+
+
+Show All Databases
+------------------
+show dbs
+
+
+Select Database to Work With
+----------------------------
+use databaseName
+
+
+List Down Collections, Users, Roles, etc.
+-----------------------------------------
+// List down collections of the current database
+show collections;
+db.getCollectionNames();
+
+// List down all the users of current database
+show users;
+db.getUsers();
+
+// List down all the roles
+show roles
+
+Create a Collection
+-------------------
+db.createCollection("collectionName");
+
+Show all entries in a collectionName
+------------------------------------
+dv.collectionName.find()
+
+

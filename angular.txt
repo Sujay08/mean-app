@@ -1,0 +1,6 @@
+Operators
+---------
+
+operators are actions we can perform on observables berfore sending them to the subscribe method
+pipe() allows us to add these operators.
+we import operators from rxjs/operators
